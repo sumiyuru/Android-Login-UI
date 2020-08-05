@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fancy="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:fillViewport="true"
+    android:layout_height="match_parent"
+    tools:context=".Login">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <com.github.florent37.shapeofview.shapes.ArcView
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:elevation="4dp"
+            app:shape_arc_height="20dp"
+            app:shape_arc_position="bottom"
+            >
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:background="@drawable/bg"
+                android:layout_height="wrap_content">
+
+            </android.support.constraint.ConstraintLayout>
+
+
+        </com.github.florent37.shapeofview.shapes.ArcView>
+
+        <android.support.design.card.MaterialCardView
+            xmlns:android="http://schemas.android.com/apk/res/android"
+
+            android:layout_width="match_parent"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            card_view:cardUseCompatPadding="true"
+            card_view:cardElevation="10dp"
+            card_view:cardCornerRadius="4dp"
+            android:layout_height="wrap_content">
+
+
+            <EditText
+                android:id="@+id/un"
+                style="@style/MyEditTextStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginTop="30dp"
+                android:ems="10"
+                android:hint="Username"
+                android:inputType="textPersonName"
+                android:textColor="#000"
+                android:drawablePadding="5dp"
+                android:drawableLeft="@drawable/ic_account_circle_black_24dp"
+                android:textSize="20dp" />
+
+            <EditText
+                android:id="@+id/pw"
+                style="@style/MyEditTextStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginTop="90dp"
+                android:ems="10"
+                android:hint="Password"
+                android:inputType="textPassword"
+                android:textColor="#000"
+                android:drawablePadding="5dp"
+                android:drawableLeft="@drawable/ic_enhanced_encryption_black_24dp"
+                android:textSize="20dp" />
+
+
+            <com.rilixtech.materialfancybutton.MaterialFancyButton
+                android:id="@+id/login"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginTop="170dp"
+                android:layout_marginBottom="20dp"
+                fancy:mfb_radius="4dp"
+                fancy:mfb_defaultColor="@color/colorPrimaryDark"
+                fancy:mfb_text="Sign In"
+                android:textColor="#fff"
+                fancy:mfb_icon="@string/fawi_user"
+                android:textSize="22dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="220dp"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/stay"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="30dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginBottom="20dp"
+                    android:layout_weight="1"
+                    android:text="Stay Logged In"
+                    android:textColor="#000"
+                    android:textSize="20dp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="1dp"
+                android:layout_marginTop="300dp"
+                android:background="@android:color/darker_gray" />
+
+
+            <com.rilixtech.materialfancybutton.MaterialFancyButton
+                android:id="@+id/reset"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginTop="330dp"
+                android:layout_marginBottom="30dp"
+                fancy:mfb_radius="4dp"
+                fancy:mfb_defaultColor="@color/colorPrimary"
+                android:text="reset"
+                android:textColor="#fff"
+                fancy:mfb_icon="@string/fawi_refresh"
+                android:textSize="22dp" />
+        </android.support.design.card.MaterialCardView>
+
+    </LinearLayout>
+
+
+</ScrollView>
